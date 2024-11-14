@@ -58,10 +58,13 @@
     overflow: hidden;
     border-radius: rem(10px);
     color: $body-bg;
-    padding: rem(20);
+    --card-padding: 20px;
+    @include media-breakpoint-up(xl) {
+      --card-padding: 40px;
+    }
+    padding: var(--card-padding);
     min-height: rem(360);
     @include media-breakpoint-up(xl) {
-      padding: rem(40);
       min-height: rem(423);
     }
 
@@ -125,6 +128,18 @@
       @include media-breakpoint-up(xl) {
         max-width: 60%;
       }
+    }
+    a {
+      position: absolute;
+      z-index: 5;
+      bottom: var(--card-padding);
+      left: var(--card-padding);
+      color: white;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+
     }
   }
   .container {
