@@ -2,170 +2,189 @@
 .headerBlock {
 	--sPT: #{rem(150)};
 	// --sPB: #{rem(150)};
-  @include media-breakpoint-up(lg) {
-    --sPT: #{rem(250)};
-    // --sPB: #{rem(250)};
-  }
-	// --sTPB: #{rem()}; 
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(250)};
+		// --sPB: #{rem(250)};
+	}
+	// --sTPB: #{rem()};
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 
-  @include media-breakpoint-up(lg) {
-    min-height: rem(760);
-  }
+	@include media-breakpoint-up(lg) {
+		min-height: rem(760);
+	}
 	position: relative;
 	overflow: hidden;
-  .video-background {
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+	.video-background {
+		overflow: hidden;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		transform: translate(-50%, -50%);
+		// z-index: -1;
 
+		border-radius: rem(20);
+		@include media-breakpoint-up(xl) {
+			clip-path: path(
+				"M0 24C0 10.7452 10.7452 0 24 0H736.257C749.512 0 760.257 10.7452 760.257 24V69C760.257 82.2548 771.002 93 784.257 93H1116C1129.25 93 1140 103.745 1140 117V736C1140 749.255 1129.25 760 1116 760H102.171C88.9166 760 78.1714 749.255 78.1714 736V524C78.1714 510.745 67.4263 500 54.1714 500H24C10.7452 500 0 489.255 0 476V24Z"
+			);
 
-    border-radius: rem(20);
-    @include media-breakpoint-up(xl) {
-      clip-path: path("M0 24C0 10.7452 10.7452 0 24 0H736.257C749.512 0 760.257 10.7452 760.257 24V69C760.257 82.2548 771.002 93 784.257 93H1116C1129.25 93 1140 103.745 1140 117V736C1140 749.255 1129.25 760 1116 760H102.171C88.9166 760 78.1714 749.255 78.1714 736V524C78.1714 510.745 67.4263 500 54.1714 500H24C10.7452 500 0 489.255 0 476V24Z");
+			// clip-path: path("M0 24C0 10.7452 10.7452 0 24 0H834.257C847.512 0 858.257 10.7452 858.257 24V69C858.257 82.2548 869.002 93 882.257 93H1116C1129.25 93 1140 103.745 1140 117V736C1140 749.255 1129.25 760 1116 760H102.171C88.9166 760 78.1714 749.255 78.1714 736V524C78.1714 510.745 67.4263 500 54.1714 500H24C10.7452 500 0 489.255 0 476V24Z");
+		}
+		@include media-breakpoint-up(xxl) {
+			clip-path: path(
+				"M0 24C0 10.7452 10.7452 0 24 0H1030C1043.25 0 1054 10.7452 1054 24V69C1054 82.2548 1064.75 93 1078 93H1376C1389.25 93 1400 103.745 1400 117V736C1400 749.255 1389.25 760 1376 760H120C106.745 760 96 749.255 96 736V524C96 510.745 85.2548 500 72 500H24C10.7452 500 0 489.255 0 476V24Z"
+			);
+		}
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		// z-index: 2;
+		// opacity: .4;
+		mix-blend-mode: hard-light;
+		background: linear-gradient(132deg, #e3e7fa 29.5%, #dac0f6 100%);
+	}
 
-      // clip-path: path("M0 24C0 10.7452 10.7452 0 24 0H834.257C847.512 0 858.257 10.7452 858.257 24V69C858.257 82.2548 869.002 93 882.257 93H1116C1129.25 93 1140 103.745 1140 117V736C1140 749.255 1129.25 760 1116 760H102.171C88.9166 760 78.1714 749.255 78.1714 736V524C78.1714 510.745 67.4263 500 54.1714 500H24C10.7452 500 0 489.255 0 476V24Z");
-
-    }
-    @include media-breakpoint-up(xxl) {
-      clip-path: path("M0 24C0 10.7452 10.7452 0 24 0H1030C1043.25 0 1054 10.7452 1054 24V69C1054 82.2548 1064.75 93 1078 93H1376C1389.25 93 1400 103.745 1400 117V736C1400 749.255 1389.25 760 1376 760H120C106.745 760 96 749.255 96 736V524C96 510.745 85.2548 500 72 500H24C10.7452 500 0 489.255 0 476V24Z");
-    }
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    // opacity: .4;
-    mix-blend-mode:hard-light;
-    background: linear-gradient(132deg, #e3e7fa 29.5%, #dac0f6 100%);
-  }
-
-  .video-background video {
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-	&__row{
+	.video-background video {
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
 
-  &__bottom {
-    position: relative;
-    z-index: 5;
+	&__bottom {
+		position: relative;
+		z-index: 5;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-    padding: 0 rem(20);
+		padding: 0 rem(20);
 
-    @include media-breakpoint-up(lg) {
-      padding-left: rem(24);
-      padding-right: rem(46);
-    }
-  }
-
-  &__park-item {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(21);
-
-    padding: rem(31) rem(20);
-    border: 1px solid rgba(255, 255, 255, 0.47);
-    border-radius: 24px;
-    max-width: rem(229);
-
-    .text {
-      font-weight: 500;
-      font-size: 12px;
-      opacity: 0.5;
-    }
-
-    img {
-      width: rem(123);
-    }
-  }
-
-	.h1 {
-    line-height: 1.1;
-    font-weight: 600;
-  }
-
-  .h1, p {
-    margin-bottom: rem(30);
-  }
-
-	p {
-    @include media-breakpoint-up(md) {
-      font-size: rem(20);
-    }
-  }
-	.title-wrapper {
-    position: relative;
-    z-index: 5;
-    max-width: 90%;
-    margin: auto;
-
-    margin-bottom: rem(43);
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(24);
+			padding-right: rem(46);
+		}
 	}
 
-	@include media-breakpoint-up(xl) {}
+	&__park-item {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(21);
 
-	@include media-breakpoint-up(lg) {}
+		padding: rem(31) rem(20);
+		border: 1px solid rgba(255, 255, 255, 0.47);
+		border-radius: 24px;
+		max-width: rem(229);
 
-	@include media-breakpoint-up(md) {}
+		.text {
+			font-weight: 500;
+			font-size: 12px;
+			opacity: 0.5;
+		}
 
-	@include media-breakpoint-up(sm) {}
+		img {
+			width: rem(123);
+		}
+	}
 
-	@include media-breakpoint-up(xs) {}
+	.h1 {
+		line-height: 1.1;
+		font-weight: 600;
+	}
+
+	.h1,
+	p {
+		margin-bottom: rem(30);
+	}
+
+	p {
+		@include media-breakpoint-up(md) {
+			font-size: rem(20);
+		}
+	}
+	.title-wrapper {
+		position: relative;
+		z-index: 5;
+		max-width: 90%;
+		margin: auto;
+
+		margin-bottom: rem(43);
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+
+	@include media-breakpoint-up(lg) {
+	}
+
+	@include media-breakpoint-up(md) {
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+
+	@include media-breakpoint-up(xs) {
+	}
 
 	//
-	@include media-breakpoint-between(md, xl) {}
-
-
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-between(md, xl) {
+	}
 
 	//
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-only(xs) {
+	}
 
-	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-only(sm) {
+	}
 
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-only(md) {
+	}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-only(lg) {
+	}
 
-	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-only(xl) {
+	}
 
-  .btn-primary {
-    --bs-btn-padding-x: #{rem(40)};
-    --bs-btn-padding-y: #{rem(17)};
-  }
+	//
+	@include media-breakpoint-down(xl) {
+	}
+
+	@include media-breakpoint-down(lg) {
+	}
+
+	@include media-breakpoint-down(md) {
+	}
+
+	@include media-breakpoint-down(sm) {
+	}
+
+	@include media-breakpoint-down(xs) {
+	}
+
+	.btn-primary {
+		--bs-btn-padding-x: #{rem(40)};
+		--bs-btn-padding-y: #{rem(17)};
+	}
 }
 
 // end.headerBlock
