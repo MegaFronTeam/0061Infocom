@@ -184,12 +184,9 @@ class JSCCommon {
 			document.querySelectorAll('input[type="tel"]')
 		);
 		InputTel.forEach(element =>
-			element.setAttribute(
-				"pattern",
-				"[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"
-			)
+			element.setAttribute("pattern", "\\+998\\s[0-9]{2}\\s[0-9]{3}\\s[0-9]{2}\\s[0-9]{2}")
 		);
-		Inputmask({mask: "+9(999)999-99-99", showMaskOnHover: false}).mask(
+		Inputmask({mask: "+998 99 999 99 99", showMaskOnHover: false}).mask(
 			InputTel
 		);
 	}
@@ -417,7 +414,7 @@ class JSCCommon {
 		this.modalCall();
 		// this.tabsCostume('tabs');
 		this.mobileMenu();
-		this.inputMask();
+		// this.inputMask();
 		// this.sendForm();
 		this.heightWindow();
 		this.makeDDGroup();
