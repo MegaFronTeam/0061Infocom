@@ -2,18 +2,18 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
+	&__row {
 		--bs-gutter-x: #{rem(12)};
 		// @include media-breakpoint-up(md) {
 			--bs-gutter-y: var(--bs-gutter-x);
 		// }
     // justify-content: space-between;
-  width: 100%;
+    width: calc(100% - 6px);
 	}
 	
   position: absolute;
   top: 0;
-  left: 50%;
+  left: calc(50% + 6px);
   transform: translateX(-50%);
   width: 100%;
   z-index: 999;
