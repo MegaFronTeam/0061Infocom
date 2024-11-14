@@ -2,6 +2,10 @@
 .headerBlock {
 	--sPT: #{rem(150)};
 	// --sPB: #{rem(150)};
+  @include media-breakpoint-down(md) {
+    margin-left: rem(8);
+    margin-right: rem(8);
+  }
   @include media-breakpoint-up(lg) {
     --sPT: #{rem(250)};
     // --sPB: #{rem(250)};
@@ -24,6 +28,7 @@
     height: 100%;
     transform: translate(-50%, -50%);
     z-index: -1;
+
 
     border-radius: rem(20);
     @include media-breakpoint-up(xl) {

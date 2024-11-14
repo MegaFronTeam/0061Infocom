@@ -114,6 +114,11 @@ main{
 	flex-grow: 1;
 }
 
+.container {
+  @include media-breakpoint-down(md) {
+    --bs-gutter-x: #{rem(16)};
+  }
+}
 
 
 .section {

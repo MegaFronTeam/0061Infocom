@@ -20,6 +20,7 @@
   padding-top: rem(60);
 
   &__logo {
+    margin-left: rem(8);
     @include media-breakpoint-up(md) {
       margin-left: rem(40);
     }
