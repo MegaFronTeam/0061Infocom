@@ -1,11 +1,17 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.video-background.container
+			video(autoplay muted loop playsinline)
+				source(src="img/video-bg.mp4" type="video/mp4")
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+b.title-wrapper.text-center
+				.h1 Комплексный IT&nbsp;разработчик<br>и&nbsp;интегратор
+				p Инновации, которые работают: разработка и интеграция под ключ
+				+e.btn.btn.btn-primary(href='#') Обсудить проект
+			+e.bottom
+				+soc
+				+e.park-item.text-center
+					+img('img/svg/it-uzb.svg')
+					.text Резидент IT-Park Ташкента с&nbsp;22&nbsp;сентября 2022 года
 	// end headerBlock

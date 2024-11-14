@@ -16,6 +16,16 @@
 		width: 100%;
 		display: block;
 	}
+
+  &__policy {
+    max-width: rem(679);
+    a {
+      color: #b3b7fa;
+      &:hover {
+        color: white;
+      }
+    }
+  }
 }
 
 //

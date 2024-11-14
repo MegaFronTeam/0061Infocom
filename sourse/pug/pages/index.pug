@@ -4,6 +4,7 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
+include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
@@ -24,7 +25,9 @@ block pagecontent
 	main
 		+headerBlock 
 		+sCatalog
+		+sAbout
+		+sContent
 		+sForm()
-		+sContact()
+		//- +sContact()
 		
 	+parts('footer')

@@ -1,0 +1,44 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		.container
+			.section-t #[span О компании]
+			.wrap-left
+				+img('img/sAbout-bg.png').img-bg
+				.name ООО «INFOCOM OVERSEAS»
+				+e.row.row
+					+e.col.col-lg-6
+						+e.text
+							p Компания ООО «INFOСOM OVERSEAS» образована в 2022 году для доработки, адаптации и внедрения имеющихся компетенций и инновационных технологических решений на территории Республики Узбекистан. ООО «INFOСOM OVERSEAS» с 2022 года является резидентом IT PARK UZBEKISTAN.
+							p За 2023 и 2024 год специалистами компании были реализованы ряд контрактов с зарубежными заказчиками. Стратегия «INFOСOM OVERSEAS» включает дальнейшее активное партнерство и продвижение технологий в рамках существующих и новых инфраструктурных, транспортных и энергетических проектов как в Узбекистане, так и за его пределами.
+					+e.col.col-lg-6
+						+e.item
+							.span.h3 >10
+							.small.text-secondary изобретений патентов и промышленных внедрений у Членов команды
+						+e.item
+							.span.h3 >25
+							.small.text-secondary лет экспертизы и индустриальной специализации
+					+e.col
+						a(href="#" download).link-item
+							+img('img/svg/pdf.svg')
+							| Карточка компании
+						a(href="#" download).link-item
+							+img('img/svg/pdf.svg')
+							| Статус резидента IT PARK UZBEKISTAN
+				+e.row-cards.row
+					- const wrapClass="col-lg-6"
+					+e.col(class= wrapClass)
+						+e.item-wrap
+							.content
+								.title.h4 Али <br>Альбетков
+								.prof Генеральный директор
+								p 25 лет стажа в инвестиционной и банковской сфере, финансах и управлении проектами
+							+img('img/person-1.png').person
+					+e.col(class= wrapClass)
+						+e.item-wrap
+							.content
+								.title.h4 Дмитрий <br>Тихонов
+								.prof Советник генерального директора
+								p 20-летний опыт разработки и внедрения технологий автоматизации работы ж.д. транспорта и интеллектуальных транспортных систем.
+							+img('img/person-2.png').person
+	// end sAbout

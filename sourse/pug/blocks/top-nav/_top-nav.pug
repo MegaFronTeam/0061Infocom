@@ -22,13 +22,20 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
+				.col
+					+e.logo: +img('img/svg/logo.svg')
 				.col.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
-				.col-auto.d-lg-none
+							+e.tel-wrap.d-lg-none
+								+e.tel.A(href="tel:+998772038000") +998 77 203 80 00
+								+e.btn.btn.btn-primary.btn-sm(href='tel:+998772038000') Связаться
+				.col
+					+e.tel-wrap.d-none.d-lg-flex
+						+e.tel.A(href="tel:+998772038000") +998 77 203 80 00
+						+e.btn.btn.btn-primary.btn-sm(href='tel:+998772038000') Связаться
+				.col-auto.order-last.d-lg-none
 					+menu-toggle()
 	// end top-nav

@@ -2,15 +2,17 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
-			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Submit
-				+policy
+			+e.inner-wrap
+				+b.section-title
+					.h1 Хотите обсудить проект?
+					.sub-text Заполните форму и мы свяжемся с вами
+				+form-wrap
+					+e.grid
+						+input('Введите','text', "Ваше имя" )
+						+input("sample@sample,com",'mail', 'Ваш e-mail')
+						+input("+998 ____ ____ ___ ___",'tel', 'Номер телефона')
+						+input("Например: после 14:00",'text', 'Удобное время для звонка')
+					.bottom-wrap
+						+e.btn.btn.btn-outline-light(type="submit") Обсудить проект
+						+policy
 	// end sForm

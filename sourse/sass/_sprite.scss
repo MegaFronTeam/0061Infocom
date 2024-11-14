@@ -12,20 +12,50 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(22 / #{$h} *1em );
 }
+.icon-calendar {
+	$h: 48;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(48 / #{$h} *1em );
+}
+.icon-car {
+	$h: 48;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(48 / #{$h} *1em );
+}
 .icon-check {
 	$h: 27;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(27 / #{$h} *1em );
+}
+.icon-complex {
+	$h: 48;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(48 / #{$h} *1em );
+}
+.icon-energy {
+	$h: 48;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(48 / #{$h} *1em );
 }
 .icon-fb {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
-.icon-instagram {
-	$h: 24;
+.icon-folder {
+	$h: 48;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(24 / #{$h} *1em );
+	width: calc(48 / #{$h} *1em );
+}
+.icon-instagram {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
+}
+.icon-people {
+	$h: 48;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(48 / #{$h} *1em );
 }
 .icon-telegram {
 	$h: 16;
@@ -38,9 +68,9 @@
 	width: calc(16 / #{$h} *1em );
 }
 .icon-vk {
-	$h: 24;
+	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(24 / #{$h} *1em );
+	width: calc(16 / #{$h} *1em );
 }
 .icon-whatsapp {
 	$h: 16;

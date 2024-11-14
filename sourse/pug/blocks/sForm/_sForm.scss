@@ -2,25 +2,96 @@
 	// start .sForm
 	.sForm {
 		// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sPB: #{rem(0)};
+	--sTPB: #{rem(32)};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
-		
-	}
+  &__inner-wrap {
+    background: $primary;
+    color: $body-bg;
+    border-radius: rem(10px);
+
+    padding: rem(20);
+    @include media-breakpoint-up(lg) {
+      padding: rem(40);
+    }
+  }
+
+  .sub-text {
+    @include media-breakpoint-up(lg) {
+      font-size: rem(20px);
+    }
+  }
+	.h1 {
+    font-weight: 600;
+    line-height: 110%;
+    margin-bottom: rem(16);
+  }
 	&__col{
 
 	}
-	&__item{
+	.btn {
+    --bs-btn-padding-x: #{rem(40)};
+    --bs-btn-padding-y: #{rem(18)};
+    font-weight: 500;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+	.form-wrap {
+    &__grid {
+      display: grid;
+      gap: rem(4);
+      margin-bottom: rem(32);
+      @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+  }
 
-	}
-	&__slide{
-		height: auto;
-	}
+  .form-wrap__input-wrap {
+    margin-bottom: 0;
+    padding: rem(16);
+    border-radius: rem(12px);
+    background: #333CEE;
+  }
+
+  input {
+    --bs-body-bg: transparent;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0;
+    border-radius: 0;
+    border-bottom: 1px solid transparent;
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
+    &:focus {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.603);
+    }
+  }
+
+  .form-control::placeholder {
+    opacity: 0.3;
+    color: white;
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
+  }
+
+  .bottom-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    @include media-breakpoint-up(md) {
+      align-items: center;
+      flex-direction: row;
+      gap: rem(32);
+    }
+  }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

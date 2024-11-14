@@ -5,6 +5,8 @@
 			text-align: center;
 			@include roww(20px);
 			flex-wrap: wrap;
+      
+      justify-content: center;
 		}
 	}
 
@@ -22,6 +24,10 @@
 	a {
 		display: block;
 		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+    @include media-breakpoint-up(lg) {
+      padding: rem(5) rem(10);
+      margin-top: rem(-5);
+    }
 	}
 }
 

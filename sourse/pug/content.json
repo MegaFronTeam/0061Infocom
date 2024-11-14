@@ -1,16 +1,11 @@
 {
 	"nav":[
-		{ "name":"Наши работы", "url":"#"},
-		{	"name":"Цены", "url":"#"},
-		{"name":"Калькулятор", "url":"#"},
-		{"name":"Акции", "url":"#"} ,
-		{
-			"name":"Заказать", 
-			"url":"#"
-			}
+		{ "name":"Услуги", "url":"#sCatalog"},
+		{	"name":"О компании", "url":"#sAbout"},
+		{"name":"Контакты", "url":"#sContent"}
 	],
 	"social":[
-		"fb","instagram","telegram"
+		"instagram","telegram", "vk"
 	],
 	"index":{
 		"head": {

@@ -24,7 +24,7 @@ mixin input(placeholder,  t='text', label, inputmode= t, name= t)
 	+e.input-wrap.form-group(class= (t == 'select' ? 'custom-select-wrap' : ""))
 		if label
 			label
-				+e.SPAN.input-title= label
+				+e.SPAN.input-title.small= label
 				+t(t,placeholder, name)&attributes(attributes)
 				block
 		else
@@ -65,5 +65,4 @@ mixin add-file(n)
 
 mixin policy()
 	+e.policy
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+		+e.SMALL.text Нажимая кнопку Отправить вы подтверждаете что ознакомлены с #[a(href='#') политикой конфиденциальности] и #[a(href='#') правилами обработки персональных данных] и принимаете их

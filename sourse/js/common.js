@@ -43,6 +43,12 @@ function eventHandler() {
 		},
 	};
 
+  new Swiper(".sCatalog__slider--js", {
+		slidesPerView: "auto",
+		freeMode: true,
+		watchOverflow: true,
+	});
+
 	new Swiper(".breadcrumb-slider--js", {
 		slidesPerView: "auto",
 		freeMode: true,

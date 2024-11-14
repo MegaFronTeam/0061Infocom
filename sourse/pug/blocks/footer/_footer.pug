@@ -1,9 +1,23 @@
 mixin footer()
 	+b.FOOTER.footer.section
-		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+		.container: +e.inner-wrap
+			+e.row.row
+				.col-12.col-xxl-4
+					+img(src="img/svg/logo-f.svg", alt="").logo
+				.col-lg
+					+e.item
+						.title.small Телефон
+						+e.link.A(href='tel:+998 77 203 80 00') +998 77 203 80 00
+				.col-lg
+					+e.item
+						.title.small E-mail
+						+e.link.tdu.A(href='mailto:INFO@INFOKOM.UZ') INFO@INFOKOM.UZ
+				.col-lg.col-xl-auto
+					+e.item
+						.title.small Адрес
+						+e.link.A(href='#') г. Ташкент, ул. Хамида Алимджана
+			+e.row-bottom 
+				.text-secondary.small С 2024-2025гг. Все права защищены
+				+e.links.small
+					a(href='#') Политика конфиденциальности
+					a(href='#') Пользовательское соглашение
