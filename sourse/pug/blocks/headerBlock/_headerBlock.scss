@@ -2,10 +2,6 @@
 .headerBlock {
 	--sPT: #{rem(150)};
 	// --sPB: #{rem(150)};
-  @include media-breakpoint-down(md) {
-    margin-left: rem(8);
-    margin-right: rem(8);
-  }
   @include media-breakpoint-up(lg) {
     --sPT: #{rem(250)};
     // --sPB: #{rem(250)};
